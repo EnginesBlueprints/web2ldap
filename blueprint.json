@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2020-02-28T15:53:46+11:00"
+    "timestamp": "2020-02-28T22:50:46+11:00"
   },
   "software": {
     "base": {
@@ -46,6 +46,15 @@
       },
       {
         "package": "libsasl2-dev"
+      }
+    ],
+    "installed_packages": [
+      {
+        "name": "web2ldap-1.5.53.tar.gz",
+        "download_type": "http(s)",
+        "source_url": "https://www.web2ldap.de/download/web2ldap-1.5.53.tar.gz",
+        "destination": "/home/app/web2ldap",
+        "path_to_extracted": "web2ldap-1.5.53"
       }
     ]
   }
