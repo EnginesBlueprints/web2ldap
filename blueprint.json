@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2020-02-28T15:27:31+11:00"
+    "timestamp": "2020-02-28T15:53:46+11:00"
   },
   "software": {
     "base": {
@@ -39,6 +39,14 @@
         "language": "sh",
         "content": "#!/bin/sh\r\n. /home/app/venv/bin/activate\r\n\r\npython -m pip install --find-links https://www.web2ldap.de/download.html web2ldap\r\n\r\n"
       }
-    }
+    },
+    "system_packages": [
+      {
+        "package": "libldap2-dev"
+      },
+      {
+        "package": "libsasl2-dev"
+      }
+    ]
   }
 }
