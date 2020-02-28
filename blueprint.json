@@ -16,7 +16,7 @@
         "patch": 0
       }
     },
-    "timestamp": "2020-02-28T15:24:49+11:00"
+    "timestamp": "2020-02-28T15:27:31+11:00"
   },
   "software": {
     "base": {
@@ -24,6 +24,7 @@
       "framework": "python3.7",
       "deployment_type": "web",
       "http_protocol": "https_and_http",
+      "framework_port_override": 8000,
       "memory": {
         "required": 128,
         "recommended": 128
@@ -32,7 +33,7 @@
     "scripts": {
       "start": {
         "language": "sh",
-        "content": "#!/bin/sh\r\nPID_FILE=/var/run/engines/web2ldap.pid\r\n\r\nexport PID_FILE\r\n. /home/engines/functions/trap.sh\r\n. /home/app/venv/bin/activate\r\n\r\n\r\n\r\nweb2ldap 0.0.0.0 8000 &\r\necho $! > $PID_FILE\r\n\r\nsleep 400\r\n"
+        "content": "#!/bin/sh\r\nPID_FILE=/var/run/engines/web2ldap.pid\r\n\r\nexport PID_FILE\r\n. /home/engines/functions/trap.sh\r\n. /home/app/venv/bin/activate\r\n\r\n\r\n\r\nweb2ldap 0.0.0.0 8000 &\r\necho $! > $PID_FILE\r\nwait\r\nsleep 400\r\n"
       },
       "install": {
         "language": "sh",
